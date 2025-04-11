@@ -1,6 +1,10 @@
-import { PrismaClient } from "@repo/db/client";
-import styles from "./page.module.css";
+"use client";
 
-export default function Home() {
-  return <div className="text-sm">hi there</div>;
+import { useBalance } from "@repo/store/balance";
+
+export default function() {
+  const balance = useBalance();
+  return <div>
+    hi there {balance}
+  </div>
 }
